@@ -1,1 +1,0 @@
-UserAccounts = new Mongo.Collection('users');

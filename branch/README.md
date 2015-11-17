@@ -1,1 +1,1 @@
-# Károlyi Mihály Kollégium - EPAM verseny - 4es szint
+# kmk-meteor
