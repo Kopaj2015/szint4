@@ -5,12 +5,16 @@
  /*
 	megnevezes,idopont,eredmeny,sport_id,ki1,ki2
  */
-esemeny = new Mongo.Collection('esemeny');
+Esemeny = new Mongo.Collection('esemeny');
 /*
 	id,megnevezes
 */
-sportok = new Mongo.Collection('sportok');
+Sportok = new Mongo.Collection('sportok');
 /*
 	username,password,szint
 */
-felhasznalo = new Mongo.Collection('felhasznalo');
+Felhasznalo = new Mongo.Collection('felhasznalo');
+/*
+	id, esemeny_id, felhasznalo_id, mire
+*/
+Fogadas = new Mongo.Collection('fogadas');
