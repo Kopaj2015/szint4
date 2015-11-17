@@ -26,15 +26,14 @@ Meteor.publish('fogadas', function() {
  *   return Meteor.users.find({}, {fields: {_id: 1, username: 1, profile: 1}});
  * });
  */
-
 Meteor.methods({
   /**
-   * Save a message to the backend database.
+   * Save an event to server db
    */
-  addMessage: function(message) {
+  addEsemeny: function(esemenyek) {
     if(Meteor.user()) {
-      Messages.insert({
-        userId:  Meteor.user()._id,
+      Esemeny.insert({
+        //_id:  Meteor.user()._id,
         message: message,
         createdAt: new Date()
       });
