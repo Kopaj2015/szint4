@@ -10,7 +10,7 @@ Router.configure({
  * Authentication beforeAction.
  * Prevents access to the user details page if user is not logged in.
  */
-Router.onBeforeAction(function () {
+/*Router.onBeforeAction(function () {
   if (!Meteor.userId()) {
     this.redirect('chatRoom');
   } else {
@@ -18,7 +18,7 @@ Router.onBeforeAction(function () {
   }
 }, {
   only: ['userDetails']
-});
+});*/
 
 /**
  * Router definition for the chat room page.
@@ -29,7 +29,8 @@ Router.route('/', {
   template: 'vendegHtml',
   subscriptions: function() {
     return [
-      Meteor.subscribe('userIds')
+      Meteor.subscribe('userIds'),
+      Meteor.subscribe('esemenyList')
     ];
   }
 });
