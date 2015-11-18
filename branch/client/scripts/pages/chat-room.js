@@ -22,7 +22,6 @@ Template.chatRoom.events({
     }
   }
 });
-
 Template.chatRoom.helpers({
   /**
    * Get the messages from the database.
@@ -54,21 +53,5 @@ Template.chatRoom.helpers({
       return 'own';
     }
     return '';
-  },
-  /**
-   * Calculate the dim effect from the current index.
-   * @param index The current position of the watcher.
-   * @returns {String} Css class depending on the index of the element.
-   */
-  applyDimEffect: function(index) {
-    if(index <= 4) {
-      return '';
-    } else if(index <= 6) {
-      return 'low-dim';
-    } else if(index <= 7){
-      return 'high-dim';
-    } else {
-      return 'hidden'
-    }
   }
 });

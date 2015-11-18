@@ -2,9 +2,11 @@
  * Publish the 8 latest messages.
  * @return {Mongo.Cursor} Sorted and limited collection objects.
  */
+ /*
 Meteor.publish('messages', function () {
   return Messages.find({}, { sort: {createdAt: -1}, limit: 8 });
 });
+*/
 
 /**
  * Publish users _id, username and profile information.
@@ -15,10 +17,7 @@ Meteor.publish('userIds', function () {
 });
 
 Meteor.methods({
-  /**
-   * Save a message to the backend database.
-   */
-  addMessage: function(message) {
+  /*addMessage: function(message) {
     if(Meteor.user()) {
       Messages.insert({
         userId:  Meteor.user()._id,
@@ -26,5 +25,5 @@ Meteor.methods({
         createdAt: new Date()
       });
     }
-  }
+  }*/
 });

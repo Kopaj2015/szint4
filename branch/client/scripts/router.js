@@ -25,11 +25,10 @@ Router.onBeforeAction(function () {
  * Subscribes to the required publications.
  */
 Router.route('/', {
-  name:     'chatRoom',
-  template: 'chatRoom',
+  name:     'vendegHtml',
+  template: 'vendegHtml',
   subscriptions: function() {
     return [
-      Meteor.subscribe('messages'),
       Meteor.subscribe('userIds')
     ];
   }
