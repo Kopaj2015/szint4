@@ -6,8 +6,9 @@ Template.vendegHtml.events({
 
   'blur input, blur textarea': function(event) {
     var esemenylista=Esemenyek.find().fetch();
-    console.log(esemenylista[0]["megnevezes"]);
-    //Meteor.call('addEsemeny');
+    for(var i=0;i<esemenylista.length;i++)
+      console.log(esemenylista[i]["megnevezes"]);
+    Meteor.call('addEsemeny','Teszt'+i, '2015', '?:?', '1', '4', '5', '4');
     var data = Meteor.user().profile;
     data[event.target.name] = event.target.value;
     Meteor.users.update({_id: Meteor.user()._id}, {$set: {
